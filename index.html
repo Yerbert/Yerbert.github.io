@@ -1,108 +1,108 @@
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <title>Object Defect Classification Form</title>
-    <link href="Untitled-2.css" rel="stylesheet">
-  </head>
-  <body>
-      <div id = "welcomediv" style = "display:inline">
-        <h1>Welcome to the Object Defect Classification Form</h1>
-        <h2>Please click the button below to submit an object for classification</h2>
-        <input type="button" class="button" id="formStart" value="Classify Object" onclick="startClassification();" />  
-      </div>
-      
-      
-      <div id = "formdiv" style = "display:none">
-        <form id = "form" action="http://localhost/Study/onFormSubmission.php" method="POST">
-        <h1>Object Defect Classification Form</h1>
-        <p>Required fields are followed by an <strong><abbr title="required">*</abbr></strong></p>
-        <section>
-            <h2>General information</h2>
-            <!--Study ID-->
-            <p>
-              <label for="id">
-                <span>Study ID Number: </span>
-              </label>
-              <input type="text" id="name" name="username">
-                <strong><abbr title="required">*</abbr></strong>
-            </p>
-            <!--Date and Time input-->
-            <p>
-              <label for="id">
-                <span>Date and Time of Submission: </span>
-              </label>
-              <input type="datetime-local" name="datetime" id="datetime">
-                <strong><abbr title="required">*</abbr></strong>
-            </p>
-            
-            
-        </section>
-        <section>
-            <h2>Object Information</h2>
-            <p>
-              <label for="object description">
-                <span>Object Description: </span>
-              </label>
-              <textarea id="objectdescription" name="objectdescription" placeholder="Please enter a description of the object" ></textarea>
-                <strong><abbr title="required">*</abbr></strong>
-            </p>
-            <p>
-              <label for="object colour">
-                <span>Object Colour: </span>
-              <input type="text" id="objectcolour" name="objectcolour">
-                <strong><abbr title="required">*</abbr></strong>
-              </label>
-            </p>
-            <p>
-              <label for="object number">
-                <span>Object Number: </span>
-                <input type="number" id="objectnumber" name="objectnumber" >
-                <strong><abbr title="required">*</abbr></strong>
-              </label>
-            </p>
-        </section>
-        <section>
-            <h2>Defect Information</h2>
-            <p>
-                <label>
-                <span id="visibledefect">Is there a visible Defect?       </span>
-                </label>
-                    <input type="radio" id="visibledefect_1" name="visibledefect" value="K">
-                    <label for="visible defect">Yes</label>
-                    <input type="radio" id="visibledefect_2" name="visibledefect" value="Q">
-                    <label for="visible defect"> No</label>
-                <strong><abbr title="required">*</abbr></strong> 
-            </p>
-            
-            <p>
-              <label for="object condition">
-                <span>Object Condition report: </span>
-              </label>
-              <textarea id="objectcondition" name="objectcondition" placeholder="Please enter a brief summary of the objects condition. Are there any scratches, marks, or other issues?"></textarea>
-                <strong><abbr title="required">*</abbr></strong>
-            </p>
-        </section>
-        <section>
-            <p>
-                <label>
-                <span>Upload Photo of Object: </span>
-                </label>
-                <input type="file" name"file" id="file" accept="image/*;capture=camera">
-                <strong><abbr title="required">*</abbr></strong>
-            </p>
-        </section>
-        <section>
-            <p>
-              <input type="button" class="button" id="submit" value="Submit" onclick="onSubmission();" />
-                <input type="button" class="button" id="reset" value="Reset" onclick="resetForm();" />
-            </p>
-        </section>
+<html>
+<head>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
 
-        </form>
-      </div>
+<div id = "welcomediv" style = "display:inline">
+    <h1>Welcome to the Object Defect Classification Form</h1>
+    <h2>Please click the button below to submit an object for classification</h2>
+    <input type="button" class="button" id="formStart" value="Classify Object" onclick="startClassification();" />  
+</div>
+
+<div id = "formdiv" style = "display:none" class="container">
+  <form id = "form" action="/action_page.php" method="POST">
+  <h1>Object Defect Classification Form</h1>
+  <p>Required fields are followed by an <strong><abbr title="required">*</abbr></strong></p>
+  <section>
+        <h2>General information</h2>
+        <div class="row">
+        <div class="col-25">
+          <label for="name">First Name <strong><abbr title="required">*</abbr></strong></label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="name" name="username" placeholder="Your name..">       
+        </div>
+        </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="datetime">Date and Time <strong><abbr title="required">*</abbr></strong></label> 
+            </div>
+            <div class="col-75">
+              <input type="datetime-local" name="datetime" id="datetime"> 
+            </div>
+          </div>
+  </section>
       
-      <div id = "waitdiv" style = "display:none"> 
+      <section>
+        <h2>Object Information</h2>
+          <div class="row">
+            <div class="col-25">
+              <label for="object description">Object Description <strong><abbr title="required">*</abbr></strong></label>
+            </div>
+            <div class="col-75">
+              <textarea id="objectdescription" name="objectdescription" placeholder="Please enter a description of the object" style="height:200px"></textarea>
+                
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="object colour">Object Colour <strong><abbr title="required">*</abbr></strong></label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="objectcolour" name="objectcolour">   
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="object colour">Object Number <strong><abbr title="required">*</abbr></strong></label>  
+            </div>
+            <div class="col-75">
+              <input type="number" id="objectnumber" name="objectnumber" >
+            </div>
+          </div>
+      </section>
+      
+      <section>
+        <h2>Defect Information</h2>
+          <div class="row">
+            <div class="col-25">
+              <label for="visible defect">Is there a visible Defect <strong><abbr title="required">*</abbr></strong></label>
+            </div>
+            <div class="col-75">
+                <input type="radio" id="visibledefect_1" name="visibledefect" value="K">
+                <label for="visible defect">Yes</label>
+                <input type="radio" id="visibledefect_2" name="visibledefect" value="Q">
+                <label for="visible defect"> No</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="object condition">Object Condition report <strong><abbr title="required">*</abbr></strong></label>
+            </div>
+            <div class="col-75">
+              <textarea id="objectcondition" name="objectcondition" placeholder="Please enter a brief summary of the objects condition. Are there any scratches, marks, or other issues?" style="height:200px"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="object colour">Upload Photo of Object <strong><abbr title="required">*</abbr></strong></label>
+            </div>
+            <div class="col-75">
+              <input type="file" name"file" id="file" accept="image/*;capture=camera"> 
+            </div>
+          </div>
+      </section>
+      <br>
+      <section>
+            <input type="button" class="button" id="submit" value="Submit" onclick="onSubmission();" />
+            <input type="button" class="button" id="reset" value="Reset" onclick="resetForm();" />
+        </section>
+  </form>
+</div>
+    
+<div id = "waitdiv" style = "display:none"> 
         <section class = "loader"></section>
       </div>
       
@@ -115,6 +115,8 @@
         <input type="button" class=button id="formStart1" value="Classify New Object" onclick="startClassification();" />
       </div>
     
-  </body>
-    <script type="text/javascript" src="script.js"></script>
+</body>
+<script type="text/javascript" src="script.js"></script>
 </html>
+
+
