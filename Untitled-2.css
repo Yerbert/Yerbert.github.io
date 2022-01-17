@@ -70,11 +70,11 @@
         background-color: white; 
         color: black; 
         border: 2px solid lightseagreen;
-        padding: 10px 32px;
+        padding: 30px 96px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 16px;
+        font-size: 48px;
         margin: 4px 2px;
         transition-duration: 0.3s;
         cursor: pointer;
