@@ -1,8 +1,12 @@
-
+abbr, accronym{ 
+    border-bottom: 0px !important;
+    text-decoration: none !important;
+}
 
 body {
     text-align: center;
     font-family: "helvetica", Arial, sans-serif;
+    font-size: 20px;
 }
 
 
@@ -75,11 +79,6 @@ label {
 }
 
 /*Loading animation */
-abbr, accronym{ 
-    border-bottom: none !important;
-    text-decoration: none !important;
-}
-
 
 .loader {
   position: absolute;
