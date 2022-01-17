@@ -6,7 +6,7 @@ abbr, accronym{
 body {
     text-align: center;
     font-family: "helvetica", Arial, sans-serif;
-    font-size: 30px;
+    font-size: 50px;
 }
 
 
@@ -22,7 +22,7 @@ input[type=text], input[type=number], input[type=datetime-local], input[type=fil
   border: 1px solid #ccc;
   border-radius: 4px;
   resize: vertical;
-    font-size:25px
+    font-size:50px
 }
 
 label {
