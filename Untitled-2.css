@@ -27,6 +27,7 @@
 
     div+div {
         margin-top: 1em;
+        width: 100%;
     }
 
     label span {
@@ -59,7 +60,7 @@
     }
 
     fieldset {
-        width: auto;
+        width: 100%;
         box-sizing: border-box;
         border: 1px solid #999;
         display: inline-block;
