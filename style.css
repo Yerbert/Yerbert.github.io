@@ -22,7 +22,18 @@ input[type=text], input[type=number], input[type=datetime-local], input[type=fil
   border: 1px solid #ccc;
   border-radius: 4px;
   resize: vertical;
-    font-size:25px
+font-size:25px
+}
+
+input[type=radio] {
+    border: 0px;
+    width: 42px;
+    height: 2em;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin: 5px 0 6px 50px;
 }
 
 label {
@@ -46,9 +57,9 @@ label {
         cursor: pointer;
     }
 
-    .button:hover {
-        background-color: #45a049;
-    }
+.button:hover {
+    background-color: #45a049;
+}
 
 .col-25 {
   float: left;
